@@ -1,15 +1,16 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import './index.css'
+import './App.css'
 import { createBrowserRouter, RouterProvider } from 'react-router'
 import Home from './Main_Components/Home.jsx'
-import Structure from './Main_Components/Structure.jsx'
+import App from './App.jsx'
 
 
 let route = createBrowserRouter([
   {
     path: '/',
-    element: <Structure />,
+    element: <App />,
     children: [
       {
         index: true,

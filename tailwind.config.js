@@ -5,7 +5,14 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        "muli-light": ["muli-light"],
+        "muli-regular": ["muli-regular"],
+        "muli-semibold": ["muli-semibold"],
+        "muli-bold": ["muli-bold"]
+      }
+    },
   },
   plugins: [],
 }

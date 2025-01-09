@@ -1,3 +1,20 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@font-face {
+    font-family: 'muli-light';
+    src: url("./assets/fonts/Muli-Light.ttf");
+}
+@font-face {
+    font-family: 'muli-regular';
+    src: url("./assets/fonts/Muli.ttf");
+}
+@font-face {
+    font-family: 'muli-semibold';
+    src: url("./assets/fonts/Muli-SemiBold.ttf");
+}
+@font-face {
+    font-family: 'muli-bold';
+    src: url("./assets/fonts/Muli-Bold.ttf");
+}
