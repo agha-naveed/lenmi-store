@@ -21,7 +21,7 @@ export default function Navbar() {
 
                 <div className='text-white flex text-[34px] gap-2'>
                     <TiShoppingCart className='cursor-pointer' title='Cart' />
-                    <MdOutlineAccountCircle className='cursor-pointer' title='Account' />
+                    <Link to="/login"><MdOutlineAccountCircle className='cursor-pointer' title='Account' /></Link>
                 </div>
             </div>
 
