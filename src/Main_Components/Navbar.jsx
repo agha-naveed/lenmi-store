@@ -8,7 +8,7 @@ import logo from '../assets/img/logo.webp'
 
 export default function Navbar() {
   return (
-    <div className='w-full h-[116px] bg-slate-800 py-2'>
+    <div className='w-full h-[116px] bg-slate-800 py-3'>
         <div className="container mx-auto">
             <div className='flex w-full justify-between'>
                 <img decoding='async' className='w-48' src={logo} alt="Lenmi Store Logo" />
@@ -28,13 +28,13 @@ export default function Navbar() {
             <nav className='content-center'>
                 <ul className='text-white flex w-full justify-center p-3 gap-2'>
                     <li className='flex'>
-                        <Link to={"/"} className='py-2 px-4'>Home</Link>
+                        <Link to={"/"} className='py-2 px-4 transition-all underline-offset-0 hover:underline  hover:underline-offset-8'>Home</Link>
                     </li>
                     <li className='flex'>
-                        <Link to={"/"} className='py-2 px-4'>Products</Link>
+                    <Link to={"/"} className='py-2 px-4 transition-all underline-offset-0 hover:underline  hover:underline-offset-8'>Products</Link>
                     </li>
                     <li className='flex'>
-                        <Link to={"/"} className='py-2 px-4'>Super Deals</Link>
+                    <Link to={"/"} className='py-2 px-4 transition-all underline-offset-0 hover:underline  hover:underline-offset-8'>Super Deals</Link>
                     </li>
                 </ul>
             </nav>
