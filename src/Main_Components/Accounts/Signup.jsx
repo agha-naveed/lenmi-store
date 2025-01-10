@@ -50,12 +50,16 @@ export default function Signup() {
                         </div>
                     </div>
                     <div className='grid'>
+                        <label htmlFor="">Phone Number</label>
+                        <input type="number" onKeyDown={(e) => restrictSigns(e)}  className='h-9 px-2 rounded-md border border-gray-300' required {...register("phone_number", {min: 11})} />
+                    </div>
+                    <div className='grid'>
                         <label htmlFor="">Email</label>
                         <input type="email" placeholder='e.g: abc@xyz.com' className='h-9 px-2 rounded-md border border-gray-300' required {...register("email")} />
                     </div>
                     <div className='grid'>
-                        <label htmlFor="">Phone Number</label>
-                        <input type="number" onKeyDown={(e) => restrictSigns(e)}  className='h-9 px-2 rounded-md border border-gray-300' required {...register("phone_number", {min: 11})} />
+                        <label htmlFor="">Password</label>
+                        <input type="password" className='h-9 px-2 rounded-md border border-gray-300' required {...register("password")} />
                     </div>
 
                     <div className='grid py-2'>
