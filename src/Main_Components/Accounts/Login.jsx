@@ -1,5 +1,5 @@
 import React from 'react'
-import logo from '../assets/img/logo.webp'
+import logo from '../../assets/img/logo.webp'
 import { Link } from 'react-router'
 
 export default function Login() {
@@ -12,7 +12,7 @@ export default function Login() {
         
         <div className='w-full min-h-full grid justify-center content-center'>
         
-            <p>Create an account <Link to="/signup">Sign up</Link></p>
+            <p>Create an account <Link to="/account/signup">Sign up</Link></p>
         </div>
         
     </div>

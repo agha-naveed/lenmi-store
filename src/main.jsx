@@ -5,8 +5,9 @@ import './App.css'
 import { createBrowserRouter, RouterProvider } from 'react-router'
 import Home from './Main_Components/Home.jsx'
 import App from './App.jsx'
-import Signup from './Main_Components/Signup.jsx'
-import Login from './Main_Components/Login.jsx'
+import Signup from './Main_Components/Accounts/Signup.jsx'
+import Login from './Main_Components/Accounts/Login.jsx'
+import Account from './Account.jsx'
 
 
 let route = createBrowserRouter([
@@ -21,13 +22,20 @@ let route = createBrowserRouter([
     ]
   },
   {
-    path: "/signup",
-    element: <Signup />
-  },
-  {
-    path: "/login",
-    element: <Login />
+    path: "/account",
+    element: <Account />,
+    children: [
+      {
+        path: "signup",
+        element: <Signup />
+      },
+      {
+        index: true,
+        element: <Login />
+      }
+    ]
   }
+  
 ])
 
 createRoot(document.getElementById('root')).render(

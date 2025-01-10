@@ -1,5 +1,4 @@
 import React from 'react'
-import logo from '../assets/img/logo.webp'
 import { Form, Link } from 'react-router'
 import { useForm } from 'react-hook-form';
 
@@ -33,16 +32,13 @@ export default function Signup() {
       }
 
     return (
-        <div className='flex w-full min-h-screen h-full'>
-            <div className='w-1/2 min-h-full bg-slate-800 grid justify-center content-center'>
-                <img src={logo} className='w-44' alt="Lenmi Store Logo" />
-            </div>
+        <>
 
             <div className='w-full min-h-full grid justify-center content-center'>
                 
                 <h2 className='text-4xl p-6 font-muli-bold text-center'>Signup</h2>
                 
-                <Form onSubmit={handleSubmit(onSubmit)} className='grid gap-2 font-muli-regular' method='POST'>
+                <Form onSubmit={handleSubmit(onSubmit)} className='grid gap-2 font-muli-regular border border-gray-400 p-5 rounded-md' method='POST'>
                     <div className='flex gap-2'>
                         <div className='grid'>
                             <label htmlFor="">First Name</label>
@@ -62,13 +58,27 @@ export default function Signup() {
                         <input type="number" onKeyDown={(e) => restrictSigns(e)}  className='h-9 px-2 rounded-md border border-gray-300' required {...register("phone_number", {min: 11})} />
                     </div>
 
+                    <div className='grid py-2'>
+                        <label htmlFor="">Account Type:</label>
+                        <div className='flex gap-5'>
+                            <div className='flex gap-1'>
+                                <input type="radio" id='personal-account' required {...register("account_type")} />
+                                <label htmlFor="personal-account">Personal</label>
+                            </div>
+                            <div className='flex gap-1'>
+                                <input type="radio" id='business-account' required {...register("account_type")} />
+                                <label htmlFor="business-account">Business</label>
+                            </div>
+                        </div>
+                    </div>
+
                     <button type='submit' title='Sign up!' className='w-full h-10 transition-all rounded-md border font-muli-semibold bg-slate-800 text-white '>Sign up!</button>
 
                 </Form>
 
-                <p>Already have an account? <Link to="/login">Login</Link></p>
+                <p className='py-2 text-[18px]'>Already have an account? <Link to="/account" className='text-red-400 hover:underline'>Login</Link></p>
             </div>
             
-        </div>
+        </>
     )
 }
