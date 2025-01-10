@@ -11,8 +11,8 @@ export default function Navbar() {
   return (
     <div className='w-full md:h-[116px] h-[130px] bg-slate-800 py-3'>
         <div className="container mx-auto">
-            <div className='flex w-full justify-between'>
-                <img decoding='async' className='w-48' src={logo} alt="Lenmi Store Logo" />
+            <div className='flex w-full justify-between md:px-0 px-3'>
+                <img decoding='async' className='md:w-48 w-40' src={logo} alt="Lenmi Store Logo" />
                 
                 <div className='md:flex hidden w-1/2'>
                     <input type="text" placeholder='What are you looking for?' className='pl-3 pr-[53px] h-[44px] w-full rounded-md outline-none font-muli-regular' />
@@ -26,11 +26,11 @@ export default function Navbar() {
             </div>
 
 
-            <div className='md:hidden flex py-5'>
-                <FaBars className='text-white' />
+            <div className='md:hidden flex py-5 px-3'>
+                <FaBars className='text-white text-[38px] relative left-1' />
                 <div className='flex w-full'>
-                    <input type="text" placeholder='What are you looking for?' className='relative left-5 pl-3 pr-[53px] h-[44px] w-full rounded-md outline-none font-muli-regular' />
-                    <FiSearch title='Search' className='text-xl cursor-pointer p-2 top-[2px] rounded-md w-11 h-10 text-white bg-slate-800 relative -left-6' />
+                    <input type="text" placeholder='What are you looking for?' className='relative left-7 pl-3 pr-[53px] h-[44px] w-full rounded-md outline-none font-muli-regular' />
+                    <FiSearch title='Search' className='text-xl cursor-pointer p-2 top-[2px] rounded-md w-11 h-10 text-white bg-slate-800 relative -left-4' />
                 </div>
             </div>
 
