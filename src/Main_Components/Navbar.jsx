@@ -9,7 +9,7 @@ import { FaBars } from "react-icons/fa6";
 
 export default function Navbar() {
   return (
-    <div className='w-full md:h-[116px] h-[130px] bg-slate-800 py-3'>
+    <div className='w-full md:h-[130px] h-[135px] bg-slate-800 py-3'>
         <div className="container mx-auto">
             <div className='flex w-full justify-between md:px-0 px-3'>
                 <img decoding='async' className='md:w-40 w-32' src={logo} alt="Lenmi Store Logo" />
