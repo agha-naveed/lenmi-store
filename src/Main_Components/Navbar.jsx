@@ -12,7 +12,7 @@ export default function Navbar() {
     <div className='w-full md:h-[116px] h-[130px] bg-slate-800 py-3'>
         <div className="container mx-auto">
             <div className='flex w-full justify-between md:px-0 px-3'>
-                <img decoding='async' className='md:w-48 w-40' src={logo} alt="Lenmi Store Logo" />
+                <img decoding='async' className='md:w-40 w-32' src={logo} alt="Lenmi Store Logo" />
                 
                 <div className='md:flex hidden w-1/2'>
                     <input type="text" placeholder='What are you looking for?' className='pl-3 pr-[53px] h-[44px] w-full rounded-md outline-none font-muli-regular' />
