@@ -1,8 +1,12 @@
 const express = require("express")
 const route = express.Router()
 
-route.get('/', (req, res) => {
-    
+route.post('/', (req, res) => {
+    return res.json(res.body)
+})
+
+.get("/get", (req, res) => {
+
 })
 
 module.exports = route
