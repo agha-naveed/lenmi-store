@@ -30,7 +30,6 @@ export default function Signup() {
 
     return (
         <>
-
             <div className='w-full min-h-full grid justify-center content-center'>
                 
                 <h2 className='text-4xl p-6 font-muli-bold text-center'>Signup</h2>
