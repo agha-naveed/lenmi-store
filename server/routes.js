@@ -6,7 +6,7 @@ route.post('/', (req, res) => {
 })
 
 .get("/get", (req, res) => {
-
+    return res.json(res.body)
 })
 
 module.exports = route

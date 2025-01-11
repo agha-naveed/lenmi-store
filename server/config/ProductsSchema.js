@@ -29,9 +29,17 @@ const productsSchema = new mongoose.Schema({
         type: String,
         required: true
     },
+    image: {
+        type: String
+    },
+    seller: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'User',
+        required: true
+    }
 
 }, { timestamps: true });
 
-const Product = mongoose.model('Product', productSchema)
+const Product = mongoose.model('Product', ProductsSchema)
 
-module.exports = User
+module.exports = Product
