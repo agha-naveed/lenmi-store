@@ -1,4 +1,5 @@
 import React from 'react'
+import { FaStar } from "react-icons/fa";
 
 export default function ProductCard() {
   return (
@@ -8,6 +9,17 @@ export default function ProductCard() {
         </div>
         <div>
             <h2 className='text-[14.3px] font-muli-regular ellipsis'>14" inch Laptop with 512GB SSD</h2>
+            <div className='flex text-[13px] my-1'>
+                <div className='flex'>
+                    <FaStar />
+                    <FaStar />
+                    <FaStar />
+                    <FaStar />
+                    <FaStar />
+                </div>
+                <p className='text-gray-600'><span>10000+</span> sold</p>
+            </div>
+
             <div className='flex gap-2'>
                 <div className='font-muli-bold tracking-[-2px]'>PKR <span className='text-[28px]'>833</span></div>
                 <span className='line-through content-end text-[14px] relative bottom-1 text-gray-500'>PKR 980</span>
