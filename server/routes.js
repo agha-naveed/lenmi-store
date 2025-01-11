@@ -3,7 +3,10 @@ const route = express.Router()
 
 route.post('/', (req, res) => {
     let { first_name, last_name, phone_number, email, password, account_type } = req.body
+
     
+
+
     return res.json({msg: "done"})
 })
 

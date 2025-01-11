@@ -10,7 +10,6 @@ export default function Signup() {
 
 
     const onSubmit = (data) => {
-        console.log(data)
         const res = axios.post("http://localhost:3000/api/user-signup", data)
         .then(response => setMessage(response.data)).catch(err => console.warn(err))
         
