@@ -76,11 +76,11 @@ export default function Signup() {
                         </div>
                     </div>
 
-                    <button type='submit' title='Sign up!' className='w-full h-10 transition-all rounded-md border font-muli-semibold bg-slate-800 text-white '>Sign up!</button>
+                    <button type='submit' title='Sign up!' className='w-full h-10 transition-all rounded-md border font-muli-semibold bg-slate-800 hover:bg-slate-900 text-white '>Sign up!</button>
 
                 </Form>
 
-                <p className='py-2 text-[18px]'>Already have an account? <Link to="/account" className='text-red-400 hover:underline'>Login</Link></p>
+                <p className='py-2 text-[18px]' title='Login if already have an account'>Already have an account? <Link to="/account" className='text-red-400 hover:underline'>Login</Link></p>
             </div>
             
         </>
