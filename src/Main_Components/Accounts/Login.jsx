@@ -1,27 +1,28 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Form, Link } from 'react-router'
 import { useForm } from 'react-hook-form';
+import axios from 'axios';
 
 export default function Login() {
 
     const { register, handleSubmit, formState: { errors } } = useForm();
-
+    let [message, setMessage] = useState("")
 
     const onSubmit = (data) => {
-        // console.log(data)
-        // const res = axios.post("http://localhost:7000/api/create-new-invoice", data)
-        // .then(response => setMessage(response.data)).catch(err => console.warn(err))
+        console.log(data)
+        const res = axios.post("http://localhost:3000/api/user-signup", data)
+        .then(response => setMessage(response.data)).catch(err => console.warn(err))
         
     
-        // if(!message) {
-        //   setMessage(res.data);
-        //   setTimeout(() => {
-        //     navigate('/');
-        //   }, 2000)
-        // }
-        // else {
-        //   setMessage("Error Occured!");
-        // }
+        if(!message) {
+          setMessage(res.data);
+          setTimeout(() => {
+            navigate('/');
+          }, 2000)
+        }
+        else {
+          setMessage("Error Occured!");
+        }
       }
 
       function restrictSigns(event) {
