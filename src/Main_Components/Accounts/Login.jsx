@@ -10,10 +10,10 @@ export default function Login() {
 
 
     const onSubmit = async (data) => {
-      const res = await axios.post("http://localhost:3000/api/user-datas", data)
+      const res = await axios.post("http://localhost:3000/api/user-login", data)
 
       setMessage(res.data)
-      
+      console.log(res.data)
       if(!message) {
         setMessage(res.data);
       }
