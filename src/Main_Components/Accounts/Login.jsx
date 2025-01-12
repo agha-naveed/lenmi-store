@@ -9,18 +9,19 @@ export default function Login() {
     let [message, setMessage] = useState("")
 
 
-    const onSubmit = (data) => {
-        const res = axios.get("http://localhost:3000/api/user-signup/get")
-        .then(response => setMessage(response.data)).catch(err => console.warn(err))
-        
-        if(!message) {
-          setMessage(res.data);
-        }
-        else {
-          setMessage("Error Occured!");
-        }
-      }
+    const onSubmit = async (data) => {
+      const res = await axios.post("http://localhost:3000/api/user-datas", data)
 
+      setMessage(res.data)
+      
+      if(!message) {
+        setMessage(res.data);
+      }
+      else {
+        setMessage("Error Occured!");
+      }
+    }
+    
 
     return (
       <>

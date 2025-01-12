@@ -10,8 +10,7 @@ export default function Signup() {
 
 
     const onSubmit = async (data) => {
-        const res = await axios.post("http://localhost:3000/api/user-signup", data)
-        // .then(response => setMessage(response.data)).catch(err => console.warn(err))
+        const res = await axios.post("http://localhost:3000/api/user-datas", data)
 
         setMessage(res.data)
         
