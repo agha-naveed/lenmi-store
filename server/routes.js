@@ -1,12 +1,8 @@
 const express = require("express")
 const route = express.Router()
 const addUserData = require("./controllers/userdata")
-
+const User = require("./config/UserSchema")
 
 route.post('/', addUserData)
-
-.get("/get", (req, res) => {
-    return res.json(res.body)
-})
 
 module.exports = route

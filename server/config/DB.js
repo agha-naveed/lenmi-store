@@ -1,6 +1,6 @@
 const mongoose = require("mongoose")
 
-mongoose.connect("mongodb+srv://lenmi-store:Yaali110@cluster0.0lcnz.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
+mongoose.connect("mongodb://127.0.0.1:27017/lenmi-store")
 .then(() => {
     console.log("Successfully connected to MongoDB")
 })

@@ -9,9 +9,11 @@ export default function Signup() {
     let [message, setMessage] = useState("")
 
 
-    const onSubmit = (data) => {
-        const res = axios.post("http://localhost:3000/api/user-signup", data)
-        .then(response => setMessage(response.data)).catch(err => console.warn(err))
+    const onSubmit = async (data) => {
+        const res = await axios.post("http://localhost:3000/api/user-signup", data)
+        // .then(response => setMessage(response.data)).catch(err => console.warn(err))
+
+        setMessage(res.data)
         
         if(!message) {
           setMessage(res.data);
@@ -62,11 +64,11 @@ export default function Signup() {
                         <label htmlFor="">Account Type:</label>
                         <div className='flex gap-5'>
                             <div className='flex gap-1'>
-                                <input type="radio" id='personal-account' required {...register("account_type")} />
+                                <input type="radio" id='personal-account' value="personal" required {...register("account_type")} />
                                 <label htmlFor="personal-account">Personal</label>
                             </div>
                             <div className='flex gap-1'>
-                                <input type="radio" id='business-account' required {...register("account_type")} />
+                                <input type="radio" value="business" id='business-account' required {...register("account_type")} />
                                 <label htmlFor="business-account">Business</label>
                             </div>
                         </div>

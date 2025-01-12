@@ -1,17 +1,22 @@
 const User = require('../config/UserSchema')
 
-function addUserData() {
-    return (req, res) => {
-        let { first_name, last_name, phone_number, email, password, account_type } = req.body
-    
-        User.insertOne({
-            first_name,
-            last_name,
-            phone_number,
-            email,
-            password,
-            account_type
-        })
+async function addUserData() {
+    return async (req, res) => {
+        try {
+            let { first_name, last_name, phone_number, email, password, account_type } = req.body
+            console.log("first name: "+first_name)
+            User.insertOne({
+                first_name,
+                last_name,
+                phone_number,
+                email,
+                password,
+                account_type
+            })
+            return res.json({msg: "done"})
+        } catch(e) {
+            console.log(e)
+        }
     }
 }
 
