@@ -1,3 +1,7 @@
+.product-card:hover button {
+  display: flex;
+  opacity: 1  ;
+}
 .transition_2 {
   transition: 0.2s ease-out;
 }
