@@ -1,9 +1,11 @@
 import React, { useState } from 'react'
-import { Form, Link } from 'react-router'
+import { Form, Link, useNavigate } from 'react-router'
 import { useForm } from 'react-hook-form';
 import axios from 'axios';
 
 export default function Login() {
+
+    const navigate = useNavigate()
 
     const { register, handleSubmit, formState: { errors } } = useForm();
     let [message, setMessage] = useState("")
@@ -12,13 +14,14 @@ export default function Login() {
     const onSubmit = async (data) => {
       const res = await axios.post("http://localhost:3000/api/user-login", data)
 
-      setMessage(res.data)
-      console.log(res.data)
-      if(!message) {
-        setMessage(res.data);
+      if(res.data.msg == "error") {
+        alert("Email or Password is Incorrect")
       }
       else {
-        setMessage("Error Occured!");
+        console.log("Yes")
+        setTimeout(() => {
+          navigate("/")
+        }, 1000)
       }
     }
     

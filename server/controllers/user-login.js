@@ -8,12 +8,10 @@ async function checkUser(req, res) {
 
     if(isExist) {
         bcrypt.compare(password, isExist.password, (err, result) => {
-            return result ? res.json(isExist) : res.json({msg: "Email or Password is incorrect"})
+            return result ? res.json(isExist) : res.json({msg: "error"})
         })
     }
-
-    else
-        return res.json({msg: "Email or Password is incorrect"})
+    else res.json({msg: "error"})
 }
 
 module.exports = checkUser
