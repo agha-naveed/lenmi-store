@@ -1,21 +1,25 @@
 const User = require('../config/UserSchema')
 
 async function  addUserData(req, res) {
-    try {
-        let { first_name, last_name, phone_number, email, password, account_type } = req.body
-        console.log("first name: "+first_name)
-        User.insertMany([{
-            first_name,
-            last_name,
-            phone_number,
-            email,
-            password,
-            account_type
-        }])
-        return res.json({msg: "done"})
-    } catch(e) {
-        console.log(e)
-    }
+    let { first_name, last_name, phone_number, email, password, account_type } = req.body
+    User.insertMany([{
+        first_name,
+        last_name,
+        phone_number,
+        email,
+        password,
+        account_type
+    }])
+    
+    return res.json({msg: "done"})
 }
 
-module.exports = addUserData
+async function getUserData(req, res) {
+    let data = await User.find({})
+    return res.json(data)
+}
+
+module.exports = {
+    addUserData,
+    getUserData
+}

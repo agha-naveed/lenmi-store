@@ -1,8 +1,9 @@
 const express = require("express")
 const router = express.Router()
-const addUserData = require("./controllers/userdata")
+const { addUserData, getUserData } = require("./controllers/userdata")
 
 router.route("/")
 .post(addUserData)
+.get(getUserData)
 
 module.exports = router
