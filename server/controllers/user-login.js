@@ -12,8 +12,7 @@ async function checkUser(req, res) {
                 res.cookie("email", email,
                     {
                         httpOnly: true,
-                        secure: process.env.NODE_ENV === 'production',
-                        sameSite: "None"
+                        secure: true,
                     })
                 return res.json(isExist)
             }
