@@ -8,21 +8,29 @@ import { FaBars } from "react-icons/fa6";
 import { GoChecklist } from "react-icons/go";
 import { TbMessageDots } from "react-icons/tb";
 import { IoSettingsOutline } from "react-icons/io5";
+import axios from 'axios';
 
 
 export default function Navbar() {
-    const [message, setMessage] = useState("")
+    const [message, setMessage] = useState('')
+    
     useInsertionEffect(() => {
+
         const getData = async () => {
-            try {
-                let getData = await axios.get("http://localhost:3000/user-login")
-                // const
+            let fetchData = await axios.get("http://localhost:3000/api/user-login", {
+                withCredentials: true,
+            })
 
-
-            } catch(e) {
-
+            if(fetchData.data.error) {
+                setMessage(false)
             }
+            else {
+                setMessage(fetchData.data)
+            }
+            
         }
+
+        getData()
     }, [])
 
     return (
@@ -39,36 +47,44 @@ export default function Navbar() {
                     <div className='text-white flex gap-4'>
                         <div className='relative group'>
 
-                            <MdOutlineAccountCircle className='account text-[34px] cursor-pointer' title='Account' />
-
-                            <div className='login-signup-popup scale-y-100 group-hover:scale-y-100 transition_1 absolute -left-28 z-10 w-56 px-[6px] py-2 rounded-[10px] bg-white text-black grid gap-2 shadow-xl'>
+                            <div className='flex'>
+                                <MdOutlineAccountCircle className='account text-[34px] cursor-pointer' title='Account' />
                                 <div>
+                                    <span>Login / Signup</span>
+                                </div>
+                            </div>
+                            <div className='login-signup-popup scale-y-0 group-hover:scale-y-100 transition_1 absolute -left-28 z-10 w-56 px-[6px] py-2 rounded-[10px] bg-white text-black grid gap-2 shadow-xl'>
+                                {
+                                    message ? 
                                     <div>
-                                        <p className='font-muli-regular leading-[1.2] p-2 grid text-[14px]'>Welcome: <span className='text-[16px]'> Naveed Abbas</span></p>
-                                    </div>
+                                        <div>
+                                            <p className='font-muli-regular leading-[1.2] p-2 grid text-[14px]'>Welcome: <span className='text-[16px]'> {message.first_name} {message.last_name}</span></p>
+                                        </div>
 
-                                    <div className='font-muli-regular'>
-                                        <ul className='grid'>
-                                            <li className='p-[10px] rounded-lg hover:bg-gray-200 cursor-pointer transition-all  flex items-center gap-2 text-[16px]'>
-                                                <GoChecklist className='text-[18px]' />Orders
-                                            </li>
-                                            <li className='p-[10px] rounded-lg hover:bg-gray-200 cursor-pointer transition-all  flex items-center gap-2 text-[16px]'>
-                                                <TbMessageDots className='text-[18px]' />Messages
-                                            </li>
-                                            <li className='p-[10px] rounded-lg hover:bg-gray-200 cursor-pointer transition-all  flex items-center gap-2 text-[16px]'>
-                                                <IoSettingsOutline className='text-[18px]' />Settings
-                                            </li>
-                                            <li className='p-[10px] rounded-lg hover:bg-gray-200 cursor-pointer transition-all  flex items-center gap-2 text-[16px]'>
-                                                <MdOutlineHelpOutline className='text-[18px]' />Help & Support
-                                            </li>
-                                        </ul>
+                                        <div className='font-muli-regular'>
+                                            <ul className='grid'>
+                                                <li className='p-[10px] rounded-lg hover:bg-gray-200 cursor-pointer transition-all  flex items-center gap-2 text-[16px]'>
+                                                    <GoChecklist className='text-[18px]' />Orders
+                                                </li>
+                                                <li className='p-[10px] rounded-lg hover:bg-gray-200 cursor-pointer transition-all  flex items-center gap-2 text-[16px]'>
+                                                    <TbMessageDots className='text-[18px]' />Messages
+                                                </li>
+                                                <li className='p-[10px] rounded-lg hover:bg-gray-200 cursor-pointer transition-all  flex items-center gap-2 text-[16px]'>
+                                                    <IoSettingsOutline className='text-[18px]' />Settings
+                                                </li>
+                                                <li className='p-[10px] rounded-lg hover:bg-gray-200 cursor-pointer transition-all  flex items-center gap-2 text-[16px]'>
+                                                    <MdOutlineHelpOutline className='text-[18px]' />Help & Support
+                                                </li>
+                                            </ul>
+                                        </div>
                                     </div>
-                                </div>
+                                    :
+                                    <div className="grid font-muli-regular gap-1">
+                                        <button className='w-full h-[40px] bg-slate-800 transition-all hover:bg-white hover:text-black hover:border border-black text-white rounded-[10px]'><Link to="/account"> Login</Link></button>
+                                        <button className='w-full h-[30px] transition-all hover:underline rounded-[10px]'><Link to="/account/signup"> Signup</Link></button>
+                                    </div>
+                                }
 
-                                <div className="grid font-muli-regular gap-1">
-                                    <button className='w-full h-[40px] bg-slate-800 transition-all hover:bg-white hover:text-black hover:border border-black text-white rounded-[10px]'>Login</button>
-                                    <button className='w-full h-[30px] transition-all hover:underline rounded-[10px]'>Signup</button>
-                                </div>
                             </div>
 
                         </div>

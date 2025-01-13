@@ -27,11 +27,15 @@ async function checkUser(req, res) {
 
 async function getUser(req, res) {
     let cookie = await req.cookies.email
-    const isExist = await User.findOne({email: cookie})
     
-    return res.json(isExist)
+    if(cookie) {
+        const data = await User.findOne({email: cookie})    
+        return res.json(data)
+    }
+    else {
+        return res.json({error: "error"})
+    }
 }
-
 
 module.exports = {
     checkUser,
