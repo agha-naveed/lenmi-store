@@ -47,13 +47,15 @@ export default function Navbar() {
                     <div className='text-white flex gap-4'>
                         <div className='relative group'>
 
-                            <div className='flex'>
-                                <MdOutlineAccountCircle className='account text-[34px] cursor-pointer' title='Account' />
-                                <div>
-                                    <span>Login / Signup</span>
+                            <div className='flex gap-[6px] cursor-pointer h-fit'>
+                                <MdOutlineAccountCircle className='account text-[38px]' title='Account' />
+                                <div className='grid content-center leading-[17px]'>
+                                    <span className='text-[13px]'>Welcome</span>
+                                    <span className='font-muli-semibold text-[14px]'>Login / Signup</span>
                                 </div>
                             </div>
-                            <div className='login-signup-popup scale-y-0 group-hover:scale-y-100 transition_1 absolute -left-28 z-10 w-56 px-[6px] py-2 rounded-[10px] bg-white text-black grid gap-2 shadow-xl'>
+                            
+                            <div className='login-signup-popup scale-y-0 group-hover:scale-y-100 transition_1 absolute -left-10 top-11 z-10 w-56 px-[6px] py-2 rounded-[10px] bg-white text-black grid gap-2 shadow-xl'>
                                 {
                                     message ? 
                                     <div>
@@ -89,7 +91,19 @@ export default function Navbar() {
 
                         </div>
 
-                        <TiShoppingCart className='cursor-pointer text-[34px]' title='Cart' />
+                        <div className="relative group">
+
+                            <div className='flex gap-[6px] cursor-pointer h-fit'>
+                                <TiShoppingCart className='cursor-pointer text-[38px]' title='Cart' />
+                                <div className='grid content-center leading-[17px]'>
+                                    <span className='text-[12.5px] text-black font-muli-bold bg-white rounded-xl w-[26px] h-[14px] text-center'>
+                                        <p className='relative top-[-2px]'>1</p>
+                                    </span>
+                                    <span className='font-muli-semibold text-[14px]'>Cart</span>
+                                </div>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
 
