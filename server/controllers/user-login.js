@@ -9,7 +9,12 @@ async function checkUser(req, res) {
 
     if(isExist) {
         bcrypt.compare(password, isExist.password, (err, result) => {
-            return result ? res.json(isExist) : res.json({error: "error"})
+            if(result) {
+                res.cookie("email", password)
+                return res.json(isExist)
+            }
+            else
+                res.json({error: "error"})
         })
     }
     else res.json({error: "error"})
