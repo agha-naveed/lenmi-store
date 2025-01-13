@@ -21,14 +21,16 @@ export default function Navbar() {
 
                 <div className='text-white flex gap-4'>
                     <div className='relative group'>
+
                         <MdOutlineAccountCircle className='account text-[34px] cursor-pointer' title='Account' />
 
-                        <div className='login-signup-popup scale-y-0 group-hover:animate-slide-down transition_1 absolute -left-24 z-10 w-52 px-[6px] py-2 rounded-[10px] bg-white text-black'>
+                        <div className='login-signup-popup scale-y-0 group-hover:scale-y-100 transition_1 absolute -left-24 z-10 w-52 px-[6px] py-2 rounded-[10px] bg-white text-black'>
                             <div className="grid font-muli-regular gap-1">
                                 <button className='w-full h-[40px] bg-slate-800 transition-all hover:bg-white hover:text-black hover:border border-black text-white rounded-[10px]'>Login</button>
                                 <button className='w-full h-[30px] transition-all hover:underline rounded-[10px]'>Signup</button>
                             </div>
                         </div>
+
                     </div>
 
                     <TiShoppingCart className='cursor-pointer text-[34px]' title='Cart' />
