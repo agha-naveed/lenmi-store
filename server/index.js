@@ -20,7 +20,7 @@ app.use(express.urlencoded({ extended: true }))
 
 
 app.use("/api/user-signup", signupData)
-app.use("/api/user-login", loginData)
 
+app.use("/api/user-login", loginData)
 
 app.listen(port, () => console.log(`Server Running on port: ${port}`))

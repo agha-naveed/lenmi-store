@@ -13,13 +13,13 @@ export default function Signup() {
         const res = await axios.post("http://localhost:3000/api/user-signup", data)
 
         setMessage(res.data)
+        console.log(res.data)
         
-        if(!res.data) {
+        if(res.data.error) {
             alert("Error!")
         }
 
         else {
-            console.log(res.data)
             setTimeout(() => {
                 navigate("/account")
             }, 1000)
