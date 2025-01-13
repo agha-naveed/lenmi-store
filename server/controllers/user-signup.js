@@ -3,7 +3,7 @@ const bcrypt = require("bcrypt")
 
 async function  addUserData(req, res) {
     let { first_name, last_name, phone_number, email, password, account_type } = req.body
-    
+
     bcrypt.genSalt(10, function(err, salt) {
         bcrypt.hash(password, salt, function(err, hash) {
             User.insertMany([{
@@ -13,11 +13,11 @@ async function  addUserData(req, res) {
                 email,
                 password: hash,
                 account_type
-            }])
+            }]).then(() => res.json(req.body))
+            .catch(() => res.status(400).json())
         });
     });
-    
-    return res.json({msg: "done"})
+
 }
 
 async function getUserData(req, res) {

@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Form, Link } from 'react-router'
+import { Form, Link, useNavigate } from 'react-router'
 import { useForm } from 'react-hook-form';
 import axios from 'axios';
 
@@ -7,18 +7,22 @@ export default function Signup() {
 
     const { register, handleSubmit, formState: { errors } } = useForm();
     let [message, setMessage] = useState("")
-
+    const navigate = useNavigate()
 
     const onSubmit = async (data) => {
         const res = await axios.post("http://localhost:3000/api/user-signup", data)
 
         setMessage(res.data)
         
-        if(!message) {
-          setMessage(res.data);
+        if(!res.data) {
+            alert("Error!")
         }
+
         else {
-          setMessage("Error Occured!");
+            console.log(res.data)
+            setTimeout(() => {
+                navigate("/account")
+            }, 1000)
         }
     }
 
