@@ -8,17 +8,17 @@ export default function Login() {
     const navigate = useNavigate()
 
     const { register, handleSubmit, formState: { errors } } = useForm();
-    let [message, setMessage] = useState("")
 
 
     const onSubmit = async (data) => {
-      const res = await axios.post("http://localhost:3000/api/user-login", data)
+      const res = await axios.post("http://localhost:3000/api/user-login", data,
+        { credentials: 'include' }
+      )
       
       if(res.data.error) {
         alert("Email or Password is Incorrect")
       }
       else {
-        console.log("Yes")
         setTimeout(() => {
           navigate("/")
         }, 1000)
