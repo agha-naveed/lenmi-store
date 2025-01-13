@@ -14,7 +14,7 @@ async function checkUser(req, res) {
                         httpOnly: true,
                         secure: true,
                     })
-                return res.json(isExist)
+                return res.json("Done")
             }
 
             else
@@ -24,4 +24,16 @@ async function checkUser(req, res) {
     else res.json({error: "error"})
 }
 
-module.exports = checkUser
+
+async function getUser(req, res) {
+    let cookie = await req.cookies.email
+    const isExist = await User.findOne({email: cookie})
+    
+    return res.json(isExist)
+}
+
+
+module.exports = {
+    checkUser,
+    getUser
+}

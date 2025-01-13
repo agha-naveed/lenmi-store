@@ -1,9 +1,9 @@
 const express = require("express")
 const app = express()
 const cors = require("cors")
-const bodyParser = require("body-parser")
 const signupData = require("./routes/signup-data")
 const loginData = require("./routes/login-data")
+const cookieParser = require("cookie-parser")
 const port = 3000;
 const mongoose = require("mongoose")
 
@@ -18,7 +18,7 @@ app.use(cors({
     origin: 'http://localhost:5173',
     credentials: true,
 }));
-
+app.use(cookieParser())
 app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
 

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useInsertionEffect, useState } from 'react'
 import { Link } from 'react-router';
 import { FiSearch } from "react-icons/fi";
 import { TiShoppingCart } from "react-icons/ti";
@@ -11,6 +11,19 @@ import { IoSettingsOutline } from "react-icons/io5";
 
 
 export default function Navbar() {
+    const [message, setMessage] = useState("")
+    useInsertionEffect(() => {
+        const getData = async () => {
+            try {
+                let getData = await axios.get("http://localhost:3000/user-login")
+                // const
+
+
+            } catch(e) {
+
+            }
+        }
+    }, [])
 
     return (
         <div className='w-full md:h-[130px] h-[135px] bg-slate-800 py-3'>
