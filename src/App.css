@@ -1,3 +1,6 @@
+* {
+  letter-spacing: -1px;
+}
 .login-signup-popup::before {
   content: '';
   position: absolute;

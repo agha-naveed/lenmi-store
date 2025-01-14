@@ -12,6 +12,9 @@ export default {
         "muli-semibold": ["muli-semibold"],
         "muli-bold": ["muli-bold"]
       },
+      colors: {
+        orangeClr: "#f08a06"
+      }
     },
   },
   plugins: [],

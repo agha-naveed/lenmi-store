@@ -2,20 +2,27 @@ import React from 'react'
 
 export default function TrendingProducts() {
   return (
-    <div className='w-[260px] h-full border border-black rounded-lg p-2'>
+    <div className='w-[360px] h-full rounded-3xl p-5 bg-gray-200'>
         <div className='w-full justify-items-center grid gap-5'>
-            <div className='w-[240px] h-[230px] p-2 group transition_2 rounded-lg overflow-hidden border relative cursor-pointer'>
-                <img src="https://img.drz.lazcdn.com/static/pk/p/7b2a2355148607d8c12d443afbae210b.jpg_720x720q80.jpg_.webp" className='w-full h-full object-cover transition_2' />
-            </div>
+            <h3 className='text-2xl text-left w-full font-muli-bold tracking-[-1px] text-orangeClr'>Trending Products</h3>
 
-            <div className='flex gap-3'>
-                <div className='w-full h-full group transition_2 rounded-lg overflow-hidden border relative cursor-pointer'>
-                    <img src="https://typeshop.pk/wp-content/uploads/2024/09/749789-product-0-i-638518506623874710_06458751-c09a-4dec-b82f-416beff7e94f.webp" className='w-full h-full object-cover transition_2' />
-                </div>
-                <div className='w-full h-full group transition_2 rounded-lg overflow-hidden border relative cursor-pointer'>
-                    <img src="https://typeshop.pk/wp-content/uploads/2024/09/749789-product-0-i-638518506623874710_06458751-c09a-4dec-b82f-416beff7e94f.webp" className='w-full h-full object-cover transition_2' />
+            <div className='w-full h-auto rounded-3xl bg-white'>
+                <div className='p-6'>
+                    <div>
+                        <div className='w-full h-[280px] rounded-3xl overflow-hidden'>
+                            <img src="https://www.space-tech.co/cdn/shop/files/LE-30-Lifestyle_c501ee74-78ea-4157-8b02-e723ca8eab44_2048x2048.jpg?v=1735718661" alt="" className='w-full h-full object-cover' />
+                        </div>
+                        <span className='text-black w-full flex gap-1 items-end justify-center font-muli-semibold'>
+                            PKR
+                            <span className='text-[22px] relative top-[2px]'>1,116</span>
+                            <span className='bg-slate-800 text-white ml-1 relative top-[-3px] text-[12px] px-1 rounded-[4px] '>-72%</span>
+                        </span>
+                    </div>
+
+                    <div></div>
                 </div>
             </div>
+            
         </div>
 
     </div>
