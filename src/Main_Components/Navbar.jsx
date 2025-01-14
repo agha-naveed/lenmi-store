@@ -37,8 +37,9 @@ export default function Navbar() {
         <div className='w-full md:h-[130px] h-[135px] bg-slate-800 py-3'>
             <div className="container mx-auto">
                 <div className='flex w-full justify-between md:px-0 px-3'>
-                    <img decoding='async' className='md:w-40 w-32' src={logo} alt="Lenmi Store Logo" />
-                    
+                    <Link to="/">
+                        <img decoding='async' className='md:w-40 w-32' src={logo} alt="Lenmi Store Logo" />
+                    </Link>
                     <div className='md:flex hidden w-1/2'>
                         <input type="text" placeholder='What are you looking for?' className='pl-3 pr-[53px] h-[44px] w-full rounded-md outline-none font-muli-regular' />
                         <FiSearch title='Search' className='text-xl cursor-pointer p-2 top-[2px] rounded-md w-11 h-10 text-white bg-slate-800 relative -left-11' />
@@ -101,7 +102,7 @@ export default function Navbar() {
                                 <TiShoppingCart className='cursor-pointer text-[38px]' title='Cart' />
                                 <div className='grid content-center leading-[17px]'>
                                     <span className='text-[12.5px] text-black font-muli-bold bg-white rounded-xl w-[26px] h-[14px] text-center'>
-                                        <p className='relative top-[-2px]'>1</p>
+                                        <p className='relative top-[-2px]'>0</p>
                                     </span>
                                     <span className='font-muli-semibold text-[14px]'>Cart</span>
                                 </div>
