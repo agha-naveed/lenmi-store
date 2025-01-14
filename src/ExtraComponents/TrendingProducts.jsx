@@ -27,7 +27,7 @@ export default function TrendingProducts() {
                             <div className='w-full h-[128px] rounded-[20px] overflow-hidden'>
                                 <img src="https://www.space-tech.co/cdn/shop/files/LE-30-Lifestyle_c501ee74-78ea-4157-8b02-e723ca8eab44_2048x2048.jpg?v=1735718661" alt="" className='w-full h-full object-cover' />
                             </div>
-                            <span className='text-black w-full flex gap-[2px] py-2 items-end justify-center font-opensans-medium'>
+                            <span className='text-black w-full flex gap-[2px] py-2 items-end justify-center text-[14px] font-opensans-medium'>
                                 PKR
                                 <span className='text-[20px] relative top-[2px] font-opensans-semibold'>1,116</span>
                                 <span className='bg-slate-800 text-white ml-1 relative top-[-5px] text-[12px] px-1 rounded-[4px] '>-72%</span>
@@ -38,7 +38,7 @@ export default function TrendingProducts() {
                             <div className='w-full h-[128px] rounded-[20px] overflow-hidden'>
                                 <img src="https://www.space-tech.co/cdn/shop/files/LE-30-Lifestyle_c501ee74-78ea-4157-8b02-e723ca8eab44_2048x2048.jpg?v=1735718661" alt="" className='w-full h-full object-cover' />
                             </div>
-                            <span className='text-black w-full flex gap-[2px] py-2 items-end justify-center font-opensans-medium'>
+                            <span className='text-black w-full flex gap-[2px] py-2 items-end justify-center text-[14px] font-opensans-medium'>
                                 PKR
                                 <span className='text-[20px] relative top-[2px] font-opensans-semibold'>1,116</span>
                                 <span className='bg-slate-800 text-white ml-1 relative top-[-5px] text-[12px] px-1 rounded-[4px] '>-72%</span>
