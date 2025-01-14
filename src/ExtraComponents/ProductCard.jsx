@@ -12,14 +12,14 @@ export default function ProductCard() {
             </div>
 
             <div className='select-none'>
-                <h2 className='text-[16.3px] tracking-[-1.2px] leading-5 font-muli-semibold line-clamp-2'><Link> Lenovo | N21 | 6th Gen | 16GB Storage | 4GB RAM | 11.6″ Display | Rotatable Camera | Playstore Supported | Chromebook Daraz Like New Slightly Used Import American Stock</Link></h2>
+                <h2 className='text-[16.3px] tracking-[-1.2px] leading-5 font-opensans-semibold line-clamp-2'><Link> Lenovo | N21 | 6th Gen | 16GB Storage | 4GB RAM | 11.6″ Display | Rotatable Camera | Playstore Supported | Chromebook Daraz Like New Slightly Used Import American Stock</Link></h2>
 
                 <div className='flex gap-2'>
-                    <div className='font-muli-bold tracking-[-2px]'>PKR <span className='text-[28px]'>833</span></div>
-                    <span className='line-through content-end text-[14px] relative bottom-1 text-gray-500'>PKR 980</span>
+                    <div className='font-opensans-medium tracking-[-2px]'>PKR <span className='text-[28px] font-opensans-bold'>833</span></div>
+                    <span className='line-through content-end text-[14px] relative bottom-1 text-gray-500 font-opensans-regular'>PKR 980</span>
                 </div>
 
-                <div className='flex text-[13px] my-1 gap-1'>
+                <div className='flex items-center text-[13px] my-1 gap-1'>
                     <div className='flex text-slate-900 cursor-pointer'>
                         <FaStar />
                         <FaStar />
@@ -27,7 +27,7 @@ export default function ProductCard() {
                         <FaStar />
                         <FaStar />
                     </div>
-                    <p className='text-gray-600'><span>10000+</span> sold</p>
+                    <p className='text-gray-600 font-opensans-regular'><span>10000+</span> sold</p>
                 </div>
 
             </div>
