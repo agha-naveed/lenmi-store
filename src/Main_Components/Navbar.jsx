@@ -41,7 +41,7 @@ export default function Navbar() {
                         <img decoding='async' className='md:w-40 w-32' src={logo} alt="Lenmi Store Logo" />
                     </Link>
                     <div className='md:flex hidden w-1/2'>
-                        <input type="text" placeholder='What are you looking for?' className='pl-3 pr-[53px] h-[44px] w-full rounded-md outline-none font-muli-regular' />
+                        <input type="text" placeholder='What are you looking for?' className='pl-3 pr-[53px] h-[44px] w-full rounded-md outline-none font-opensans-regular' />
                         <FiSearch title='Search' className='text-xl cursor-pointer p-2 top-[2px] rounded-md w-11 h-10 text-white bg-slate-800 relative -left-11' />
                     </div>
 
@@ -51,8 +51,8 @@ export default function Navbar() {
                             <div className='flex gap-[6px] cursor-pointer h-fit'>
                                 <MdOutlineAccountCircle className='account text-[38px]' title='Account' />
                                 <div className='grid content-center leading-[17px]'>
-                                    <span className='text-[13px]'>Welcome</span>
-                                    <span className='font-muli-semibold text-[14px]'>{message.first_name ?? "Login / Signup"}</span>
+                                    <span className='text-[13px] font-opensans-regular'>Welcome</span>
+                                    <span className='font-opensans-semibold text-[14px]'>{message.first_name ?? "Login / Signup"}</span>
                                 </div>
                             </div>
                             
@@ -61,10 +61,10 @@ export default function Navbar() {
                                     message ? 
                                     <div>
                                         <div>
-                                            <p className='font-muli-regular leading-[1.2] p-2 grid text-[14px]'>Welcome: <span className='text-[16px]'> {message.first_name} {message.last_name}</span></p>
+                                            <p className='font-opensans-regular leading-[1.2] p-2 grid text-[14px]'>Welcome: <span className='text-[16px]'> {message.first_name} {message.last_name}</span></p>
                                         </div>
 
-                                        <div className='font-muli-regular'>
+                                        <div className='font-opensans-regular'>
                                             <ul className='grid'>
                                                 <li className='p-[10px] rounded-lg hover:bg-gray-200 cursor-pointer transition-all flex items-center gap-2 text-[16px]'>
                                                     <GoChecklist className='text-[18px]' />Orders
@@ -82,7 +82,7 @@ export default function Navbar() {
                                         </div>
                                     </div>
                                     :
-                                    <div className="grid font-muli-regular gap-1">
+                                    <div className="grid font-opensans-regular gap-1">
                                         <button>
                                             <Link to="/account" className='flex rounded-[10px] justify-center items-center w-full h-[40px] bg-slate-800 transition-all hover:bg-white hover:text-black hover:border border-black text-white'> Login</Link>
                                         </button>
@@ -101,10 +101,10 @@ export default function Navbar() {
                             <div className='flex gap-[6px] cursor-pointer h-fit'>
                                 <TiShoppingCart className='cursor-pointer text-[38px]' title='Cart' />
                                 <div className='grid content-center leading-[17px]'>
-                                    <span className='text-[12.5px] text-black font-muli-bold bg-white rounded-xl w-[26px] h-[14px] text-center'>
+                                    <span className='text-[12.5px] text-black font-opensans-medium bg-white rounded-xl w-[26px] h-[14px] text-center'>
                                         <p className='relative top-[-2px]'>0</p>
                                     </span>
-                                    <span className='font-muli-semibold text-[14px]'>Cart</span>
+                                    <span className='font-opensans-regular text-[14px]'>Cart</span>
                                 </div>
                             </div>
                         </div>
@@ -116,12 +116,12 @@ export default function Navbar() {
                 <div className='md:hidden flex py-5 px-3'>
                     <FaBars className='text-white text-[38px] relative left-1' />
                     <div className='flex w-full'>
-                        <input type="text" placeholder='What are you looking for?' className='relative left-7 pl-3 pr-[53px] h-[44px] w-full rounded-md outline-none font-muli-regular' />
+                        <input type="text" placeholder='What are you looking for?' className='relative left-7 pl-3 pr-[53px] h-[44px] w-full rounded-md outline-none font-opensans-regular' />
                         <FiSearch title='Search' className='text-xl cursor-pointer p-2 top-[2px] rounded-md w-11 h-10 text-white bg-slate-800 relative -left-4' />
                     </div>
                 </div>
 
-                <nav className='content-center md:block hidden'>
+                <nav className='content-center md:block hidden font-opensans-regular'>
                     <ul className='text-white flex w-full justify-center p-3 gap-2'>
                         <li className='flex'>
                             <Link to={"/"} className='py-2 px-4 transition-all underline-offset-0 hover:underline  hover:underline-offset-8'>Home</Link>

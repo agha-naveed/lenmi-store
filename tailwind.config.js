@@ -7,13 +7,16 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        "muli-light": ["muli-light"],
-        "muli-regular": ["muli-regular"],
-        "muli-semibold": ["muli-semibold"],
-        "muli-bold": ["muli-bold"]
+        "opensans-light": ["opensans-light"],
+        "opensans-regular": ["opensans-regular"],
+        "opensans-medium": ["opensans-medium"],
+        "opensans-semibold": ["opensans-semibold"],
+        "opensans-bold": ["opensans-bold"],
+        "opensans-extraBold": ["opensans-extraBold"]
       },
       colors: {
-        orangeClr: "#f08a06"
+        orangeClr: "#f08a06",
+        lightGray: "rgb(241, 241, 241)"
       }
     },
   },

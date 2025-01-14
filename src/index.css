@@ -3,18 +3,26 @@
 @tailwind utilities;
 
 @font-face {
-    font-family: 'muli-light';
-    src: url("./assets/fonts/Muli-Light.ttf");
+    font-family: 'opensans-light';
+    src: url("./assets/fonts/OpenSans-Light.ttf");
 }
 @font-face {
-    font-family: 'muli-regular';
-    src: url("./assets/fonts/Muli.ttf");
+    font-family: 'opensans-regular';
+    src: url("./assets/fonts/OpenSans-Regular.ttf");
 }
 @font-face {
-    font-family: 'muli-semibold';
-    src: url("./assets/fonts/Muli-SemiBold.ttf");
+    font-family: 'opensans-medium';
+    src: url("./assets/fonts/OpenSans-Medium.ttf");
 }
 @font-face {
-    font-family: 'muli-bold';
-    src: url("./assets/fonts/Muli-Bold.ttf");
+    font-family: 'opensans-semibold';
+    src: url("./assets/fonts/OpenSans-SemiBold.ttf");
+}
+@font-face {
+    font-family: 'opensans-bold';
+    src: url("./assets/fonts/OpenSans-Bold.ttf");
+}
+@font-face {
+    font-family: 'opensans-extraBold';
+    src: url("./assets/fonts/OpenSans-ExtraBold.ttf");
 }
