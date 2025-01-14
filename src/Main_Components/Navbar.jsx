@@ -51,7 +51,7 @@ export default function Navbar() {
                                 <MdOutlineAccountCircle className='account text-[38px]' title='Account' />
                                 <div className='grid content-center leading-[17px]'>
                                     <span className='text-[13px]'>Welcome</span>
-                                    <span className='font-muli-semibold text-[14px]'>Login / Signup</span>
+                                    <span className='font-muli-semibold text-[14px]'>{message.first_name ?? "Login / Signup"}</span>
                                 </div>
                             </div>
                             
@@ -65,16 +65,16 @@ export default function Navbar() {
 
                                         <div className='font-muli-regular'>
                                             <ul className='grid'>
-                                                <li className='p-[10px] rounded-lg hover:bg-gray-200 cursor-pointer transition-all  flex items-center gap-2 text-[16px]'>
+                                                <li className='p-[10px] rounded-lg hover:bg-gray-200 cursor-pointer transition-all flex items-center gap-2 text-[16px]'>
                                                     <GoChecklist className='text-[18px]' />Orders
                                                 </li>
-                                                <li className='p-[10px] rounded-lg hover:bg-gray-200 cursor-pointer transition-all  flex items-center gap-2 text-[16px]'>
+                                                <li className='p-[10px] rounded-lg hover:bg-gray-200 cursor-pointer transition-all flex items-center gap-2 text-[16px]'>
                                                     <TbMessageDots className='text-[18px]' />Messages
                                                 </li>
-                                                <li className='p-[10px] rounded-lg hover:bg-gray-200 cursor-pointer transition-all  flex items-center gap-2 text-[16px]'>
+                                                <li className='p-[10px] rounded-lg hover:bg-gray-200 cursor-pointer transition-all flex items-center gap-2 text-[16px]'>
                                                     <IoSettingsOutline className='text-[18px]' />Settings
                                                 </li>
-                                                <li className='p-[10px] rounded-lg hover:bg-gray-200 cursor-pointer transition-all  flex items-center gap-2 text-[16px]'>
+                                                <li className='p-[10px] rounded-lg hover:bg-gray-200 cursor-pointer transition-all flex items-center gap-2 text-[16px]'>
                                                     <MdOutlineHelpOutline className='text-[18px]' />Help & Support
                                                 </li>
                                             </ul>
@@ -82,8 +82,12 @@ export default function Navbar() {
                                     </div>
                                     :
                                     <div className="grid font-muli-regular gap-1">
-                                        <button className='w-full h-[40px] bg-slate-800 transition-all hover:bg-white hover:text-black hover:border border-black text-white rounded-[10px]'><Link to="/account"> Login</Link></button>
-                                        <button className='w-full h-[30px] transition-all hover:underline rounded-[10px]'><Link to="/account/signup"> Signup</Link></button>
+                                        <button>
+                                            <Link to="/account" className='flex rounded-[10px] justify-center items-center w-full h-[40px] bg-slate-800 transition-all hover:bg-white hover:text-black hover:border border-black text-white'> Login</Link>
+                                        </button>
+                                        <button>
+                                            <Link to="/account/signup" className='w-full h-[30px] transition-all hover:underline text-[15px] rounded-[10px]'> Signup</Link>
+                                        </button>
                                     </div>
                                 }
 
